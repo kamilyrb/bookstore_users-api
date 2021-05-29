@@ -27,6 +27,7 @@ func Create(c *gin.Context) {
 	result, saveErr := services.UsersService.CreateUser(user)
 	if saveErr != nil {
 		c.JSON(saveErr.Status, saveErr)
+		return
 	}
 	c.JSON(http.StatusCreated, result.Marshall(c.GetHeader("X-Public") == "true"))
 }
@@ -91,7 +92,24 @@ func Search(c *gin.Context) {
 	users, err := services.UsersService.SearchUser(status)
 	if err != nil {
 		c.JSON(err.Status, err)
+		return
 	}
 	result := users.Marshall(c.GetHeader("X-Public") == "true")
 	c.JSON(http.StatusOK, result)
+}
+
+func Login(c *gin.Context) {
+	var request users.LoginRequest
+	if err := c.ShouldBindJSON(&request); err != nil {
+		restErr := errors.NewBadRequestError("invalid json body")
+		c.JSON(restErr.Status, restErr)
+		return
+	}
+	user, err := services.UsersService.LoginUser(request)
+	if err != nil {
+		c.JSON(err.Status, err)
+		return
+	}
+	c.JSON(http.StatusOK, user.Marshall(c.GetHeader("X-Public") == "true"))
+
 }
