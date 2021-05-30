@@ -5,15 +5,15 @@ import (
 	"github.com/kamilyrb/bookstore_oauth-go/oauth"
 	"github.com/kamilyrb/bookstore_users-api/domain/users"
 	"github.com/kamilyrb/bookstore_users-api/services"
-	"github.com/kamilyrb/bookstore_users-api/utils/errors"
+	"github.com/kamilyrb/bookstore_utils-go/rest_errors"
 	"net/http"
 	"strconv"
 )
 
-func getUserId(userIdParam string) (int64, *errors.RestErr) {
+func getUserId(userIdParam string) (int64, *rest_errors.RestErr) {
 	userId, userErr := strconv.ParseInt(userIdParam, 10, 64)
 	if userErr != nil {
-		return 0, errors.NewBadRequestError("user id should be a number")
+		return 0, rest_errors.NewBadRequestError("user id should be a number")
 	}
 	return userId, nil
 }
@@ -21,7 +21,7 @@ func getUserId(userIdParam string) (int64, *errors.RestErr) {
 func Create(c *gin.Context) {
 	var user users.User
 	if err := c.ShouldBindJSON(&user); err != nil {
-		restErr := errors.NewBadRequestError("invalid json body")
+		restErr := rest_errors.NewBadRequestError("invalid json body")
 		c.JSON(restErr.Status, restErr)
 		return
 	}
@@ -39,7 +39,7 @@ func Get(c *gin.Context) {
 		return
 	}
 	if callerId := oauth.GetCallerId(c.Request); callerId == 0 {
-		err := errors.RestErr{
+		err := rest_errors.RestErr{
 			Status:  http.StatusUnauthorized,
 			Message: "resource not available",
 		}
@@ -74,7 +74,7 @@ func Update(c *gin.Context) {
 
 	var user users.User
 	if err := c.ShouldBindJSON(&user); err != nil {
-		restErr := errors.NewBadRequestError("invalid json body")
+		restErr := rest_errors.NewBadRequestError("invalid json body")
 		c.JSON(restErr.Status, restErr)
 		return
 	}
@@ -119,7 +119,7 @@ func Search(c *gin.Context) {
 func Login(c *gin.Context) {
 	var request users.LoginRequest
 	if err := c.ShouldBindJSON(&request); err != nil {
-		restErr := errors.NewBadRequestError("invalid json body")
+		restErr := rest_errors.NewBadRequestError("invalid json body")
 		c.JSON(restErr.Status, restErr)
 		return
 	}
