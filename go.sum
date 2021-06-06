@@ -22,6 +22,8 @@ github.com/json-iterator/go v1.1.9 h1:9yzud/Ht36ygwatGx56VwCZtlI/2AD15T1X2sjSuGn
 github.com/json-iterator/go v1.1.9/go.mod h1:KdQUCv79m/52Kvf8AW2vK1V8akMuk1QjK/uOdHXbAo4=
 github.com/kamilyrb/bookstore_oauth-go v0.0.0-20210530001745-c977cf341d13 h1:czgJvD+5zv4HXOKTNl2eqn30UcZx99vrPVCnXISvhJE=
 github.com/kamilyrb/bookstore_oauth-go v0.0.0-20210530001745-c977cf341d13/go.mod h1:VWoEqLeZOGyuDkJRNA5yYkfnJBSbhWT6JmMvU4kwIgI=
+github.com/kamilyrb/bookstore_oauth-go v0.0.0-20210606212954-1ea5cf590762 h1:7kvT2vzYTOnMX5iE3OGDOWKykZq4EKhU3JymoCTJqME=
+github.com/kamilyrb/bookstore_oauth-go v0.0.0-20210606212954-1ea5cf590762/go.mod h1:qrqicIp8dzVpzh8dUjMnAJ7dbHfHrB+P5U+AWtzfs7w=
 github.com/kamilyrb/bookstore_utils-go v0.0.0-20210530150857-ab31a06284bb h1:9qKYIBDV7Xd5RDZzXczeF/iZvmM4Nxc4p2IRu5nJoS0=
 github.com/kamilyrb/bookstore_utils-go v0.0.0-20210530150857-ab31a06284bb/go.mod h1:Oe+GS6ys8TMs3RcnkFhGxW9V3EvbS/WwlEa/RGkB2Y8=
 github.com/kamilyrb/bookstore_utils-go v0.0.0-20210606193045-f623220045ca h1:jcPnepQQQfCscMAaoiRJplkd0BIHgmn6sTh/iaaRlZM=
