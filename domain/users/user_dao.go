@@ -3,8 +3,8 @@ package users
 import (
 	"fmt"
 	"github.com/kamilyrb/bookstore_users-api/datasources/mysql/users_db"
-	"github.com/kamilyrb/bookstore_users-api/logger"
 	"github.com/kamilyrb/bookstore_users-api/utils/mysql_utils"
+	"github.com/kamilyrb/bookstore_utils-go/logger"
 	"github.com/kamilyrb/bookstore_utils-go/rest_errors"
 	"strings"
 )
