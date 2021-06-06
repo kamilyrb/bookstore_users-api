@@ -26,6 +26,8 @@ github.com/kamilyrb/bookstore_utils-go v0.0.0-20210530150857-ab31a06284bb h1:9qK
 github.com/kamilyrb/bookstore_utils-go v0.0.0-20210530150857-ab31a06284bb/go.mod h1:Oe+GS6ys8TMs3RcnkFhGxW9V3EvbS/WwlEa/RGkB2Y8=
 github.com/kamilyrb/bookstore_utils-go v0.0.0-20210606193045-f623220045ca h1:jcPnepQQQfCscMAaoiRJplkd0BIHgmn6sTh/iaaRlZM=
 github.com/kamilyrb/bookstore_utils-go v0.0.0-20210606193045-f623220045ca/go.mod h1:gYrYsxQOU39EU/s5A3Q6ZZNHCDzYY5qVcDfeXXTEeRQ=
+github.com/kamilyrb/bookstore_utils-go v0.0.0-20210606210809-6c85c9ba4d5f h1:aJLmHGiqbAf0uWj6fADsuCk1dfEO87YUnm5+He+yKXM=
+github.com/kamilyrb/bookstore_utils-go v0.0.0-20210606210809-6c85c9ba4d5f/go.mod h1:gYrYsxQOU39EU/s5A3Q6ZZNHCDzYY5qVcDfeXXTEeRQ=
 github.com/leodido/go-urn v1.2.0 h1:hpXL4XnriNwQ/ABnpepYM/1vCLWNDfUNts8dX3xTG6Y=
 github.com/leodido/go-urn v1.2.0/go.mod h1:+8+nEpDfqqsY+g338gtMEUOtuK+4dEMhiQEgxpxOKII=
 github.com/mattn/go-isatty v0.0.12 h1:wuysRhFDzyxgEmMf5xjvJ2M9dZoWAXNNr5LSBS7uHXY=
